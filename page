@@ -1,0 +1,24 @@
+<html><head>
+    <title>多信息文本转html</title>
+    <link rel="stylesheet" type="text/css" href="https://www.bootcss.com/p/buttons/css/buttons.css">
+  </head>
+  <body style="background-color:black">
+  
+    <h1 style="text-align:center;color: #0a7aa3c5">多信息文本转html</h1>
+    <div id="page" style="border:1px solid #999;padding:3px;background-color:rgba(255,255,255,0.5)" contenteditable="true">
+      在这里粘贴多信息文本
+    </div>
+    <script>
+      function btn(){
+        var pagehtml = document.getElementById("page").innerHTML;
+        document.getElementById("htmltext").innerHTML = '<p><xmp>' + pagehtml + '</xmp></p>'
+      }
+      
+    </script>
+    <p style="text-align:center">
+      <button id="change" onclick="btn()" class="button button-rounded button-royal button-large">转换</button>
+    </p>
+    <div id="htmltext" style="color: #0000FF;word-wrap: break-word;word-break: break-all;overflow: hidden;padding:10px;background-color:rgba(0,255,0,0.5)" contenteditable="true"></div>
+    
+  
+  </body></html>
